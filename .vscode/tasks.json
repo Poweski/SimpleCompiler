@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe", // Ścieżka do kompilatora GCC
+            "args": [
+                "-g", // Dodaje informacje o debugowaniu
+                "${file}", // Kompiluje bieżący plik
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe" // Nazwa pliku wykonywalnego
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "detail": "Generated task by Debugger."
+        }
+    ]
+}
