@@ -5,7 +5,7 @@ class Parser
     static int lookahead;
 
     public:
-        Parser() 
+        Parser()
         {
             lookahead = std::cin.get();
         }
