@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug",
+            "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/test.exe", // Ścieżka do pliku wykonywalnego lub innego programu
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe", // Ścieżka do pliku wykonywalnego lub innego programu
             "args": [], // Argumenty, które można przekazać do programu
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

@@ -4,12 +4,11 @@
         {
             "label": "compile",
             "type": "shell",
-            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe", // Ścieżka do kompilatora GCC
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
             "args": [
-                "-g", // Dodaje informacje o debugowaniu
-                "${file}", // Kompiluje bieżący plik
+                "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe" // Nazwa pliku wykonywalnego
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "group": {
                 "kind": "build",
