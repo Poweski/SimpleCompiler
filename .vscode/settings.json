@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "istream": "cpp",
-        "hstream": "hpp"
+        "hstream": "hpp",
+        "string": "cpp"
     }
 }

@@ -5,8 +5,8 @@ void Lexer::reserve(const Word& t) {
 }
 
 Lexer::Lexer() {
-    reserve(Word(Tag::True, "true"));
-    reserve(Word(Tag::False, "false"));
+    reserve(Word(Tag::TRUE, "true"));
+    reserve(Word(Tag::FALSE, "false"));
 }
 
 Token* Lexer::scan() {
