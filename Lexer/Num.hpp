@@ -1,7 +1,7 @@
 #ifndef NUM_HPP
 #define NUM_HPP
 
-#include <cstring>
+#include <string>
 #include "Token.hpp"
 
 class Num : public Token {
