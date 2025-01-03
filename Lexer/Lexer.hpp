@@ -1,25 +1,27 @@
 #ifndef LEXER_HPP
 #define LEXER_HPP
 
-#include <iostream>
-#include <unordered_map>
-#include <cctype>
 #include <string>
+#include <unordered_map>
+#include <memory>
+#include <iostream>
 #include "Token.hpp"
 #include "Word.hpp"
+#include "Tag.hpp"
 #include "Num.hpp"
+#include "Real.hpp"
 
 class Lexer {
 public:
-    int line = 1;
+    static int line;
     char peek = ' ';
-    std::unordered_map<std::string, Word> words;
-
-    void reserve(const Word& t);
+    std::unordered_map<std::string, std::shared_ptr<Word>> words;
 
     Lexer();
-
-    Token* scan();
+    void reserve(std::shared_ptr<Word> w);
+    void readch();
+    bool readch(char c);
+    std::shared_ptr<Token> scan();
 };
 
 #endif
